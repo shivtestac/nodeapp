@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+
+// Use the port provided by Azure, or default to 8080
+const port = process.env.PORT || 8080;
 
 // Middleware to parse JSON data from the request body
 app.use(express.json());
